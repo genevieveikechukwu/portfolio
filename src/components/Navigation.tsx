@@ -45,13 +45,14 @@ const Navigation = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2 cursor-pointer"
+            className="flex items-center space-x-3 cursor-pointer"
             onClick={() => scrollToSection("#home")}
           >
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
+            <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="text-sm font-bold text-primary-foreground relative z-10">G</span>
             </div>
-            <span className="font-bold text-lg text-primary-glow hidden sm:block">
+            <span className="font-semibold text-lg text-primary hidden sm:block">
               Genevieve
             </span>
           </motion.div>

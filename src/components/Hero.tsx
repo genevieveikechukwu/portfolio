@@ -1,133 +1,173 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Sparkles } from "lucide-react";
-import { FloatingElements } from "./FloatingElements";
+import { ArrowDown, Github, Linkedin, Mail, ChevronRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Animated Background Elements */}
-      <FloatingElements />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Subtle Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/95" />
       
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/10 via-transparent to-background/20" />
+      {/* Elegant Background Elements */}
+      <div className="absolute inset-0 opacity-30">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-primary rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-secondary rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="max-w-5xl mx-auto"
         >
-          {/* Animated Avatar/Logo */}
+          {/* Professional Avatar */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6, type: "spring", bounce: 0.4 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="w-32 h-32 mx-auto bg-gradient-accent rounded-full flex items-center justify-center shadow-glow animate-float">
-              <Sparkles className="w-16 h-16 text-accent-foreground" />
+            <div className="w-24 h-24 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="text-2xl font-bold text-primary-foreground relative z-10">G</span>
             </div>
           </motion.div>
 
-          {/* Main Heading */}
-          <motion.h1
+          {/* Main Content */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-glow"
+            transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+            className="space-y-6"
           >
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
-              Mmachukwu Ikechukwu Genevieve
-            </span>
-          </motion.h1>
-
-          {/* Animated Subtitle */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="mb-6"
-          >
-            <h2 className="text-2xl md:text-3xl font-semibold text-primary-glow mb-2">
-              Fullstack Developer & Automation Specialist
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Creative and playful - building digital solutions with personality and innovation
-            </p>
-          </motion.div>
-
-          {/* Main Tagline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="mb-8"
-          >
-            <p className="text-xl md:text-2xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              <span className="text-secondary-glow font-semibold">Fullstack solutions that work while you sleep utilizing AI</span>
+            {/* Name */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight">
+              <span className="font-normal text-foreground">Mmachukwu Ikechukwu</span>
               <br />
-              I help businesses scale efficiently by creating automated systems and robust web applications that handle the heavy lifting.
-            </p>
-          </motion.div>
+              <span className="font-semibold bg-gradient-primary bg-clip-text text-transparent">
+                Genevieve
+              </span>
+            </h1>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="flex flex-wrap gap-4 justify-center mb-12"
-          >
-            <Button variant="hero" size="xl" className="group">
-              Let's Build Something Amazing
-              <Sparkles className="ml-2 group-hover:animate-pulse" />
-            </Button>
-            <Button variant="glow" size="xl">
-              View My Work
-              <ArrowDown className="ml-2 animate-bounce" />
-            </Button>
-          </motion.div>
+            {/* Professional Title */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className="space-y-2"
+            >
+              <h2 className="text-xl md:text-2xl text-primary font-medium">
+                Fullstack Developer & Automation Specialist
+              </h2>
+              <div className="w-24 h-0.5 bg-gradient-primary mx-auto opacity-60" />
+            </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="flex justify-center gap-6"
-          >
-            {[
-              { icon: Mail, href: "mailto:your-email@example.com", label: "Email" },
-              { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" }
-            ].map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1.4 + index * 0.1, type: "spring", bounce: 0.5 }}
-                className="w-12 h-12 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full flex items-center justify-center hover:bg-primary/30 hover:shadow-glow hover:scale-110 transition-all duration-300"
-                aria-label={social.label}
+            {/* Value Proposition */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light"
+            >
+              I create <span className="text-secondary font-medium">automated solutions</span> and 
+              <span className="text-accent font-medium"> scalable web applications</span> that 
+              transform how businesses operate, saving time and driving growth through intelligent automation.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+            >
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="group px-8 py-3 rounded-full transition-all duration-500 hover:shadow-elegant"
               >
-                <social.icon className="w-5 h-5 text-primary-glow" />
-              </motion.a>
-            ))}
+                Start Your Project
+                <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="group px-8 py-3 rounded-full border-primary/30 hover:border-primary/60 transition-all duration-500"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                View My Work
+                <ArrowDown className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+              </Button>
+            </motion.div>
+
+            {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.8 }}
+              className="flex justify-center gap-6 pt-8"
+            >
+              {[
+                { icon: Mail, href: "mailto:your-email@example.com", label: "Email" },
+                { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
+                { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" }
+              ].map((social, index) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.7 + index * 0.1, duration: 0.6 }}
+                  className="w-12 h-12 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 group"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                </motion.a>
+              ))}
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Elegant Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
+        transition={{ delay: 2, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <div className="flex flex-col items-center text-muted-foreground">
-          <span className="text-sm mb-2">Scroll to explore</span>
-          <ArrowDown className="w-6 h-6 animate-bounce" />
-        </div>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center text-muted-foreground"
+        >
+          <div className="w-0.5 h-8 bg-gradient-to-b from-transparent via-primary/50 to-transparent mb-2" />
+          <ArrowDown className="w-4 h-4 opacity-60" />
+        </motion.div>
       </motion.div>
     </section>
   );
