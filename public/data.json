@@ -1,0 +1,137 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI-Powered E-commerce Automation Platform",
+      "description": "Complete e-commerce automation solution that increased client revenue by 300% while reducing manual work by 80%",
+      "longDescription": "Built a comprehensive automation platform that handles inventory management, customer service, order processing, and marketing campaigns. The system uses AI to predict demand, optimize pricing, and personalize customer experiences. Integrated with multiple payment gateways, shipping providers, and marketing tools.",
+      "technologies": ["React", "Node.js", "Python", "TensorFlow", "AWS", "PostgreSQL", "Redis", "Stripe", "Docker"],
+      "category": "B2B Solution",
+      "projectType": "Client Work",
+      "image": "/images/ecommerce-hero.jpg",
+      "gallery": ["/images/ecommerce-1.jpg", "/images/ecommerce-2.jpg", "/images/ecommerce-3.jpg"],
+      "liveUrl": "https://demo-ecommerce-automation.com",
+      "featured": true,
+      "completionDate": "2024-06-15",
+      "client": "TechFlow Solutions",
+      "businessImpact": "300% revenue increase, 80% reduction in manual work, 50% faster order processing",
+      "duration": "4 months",
+      "teamSize": "Solo project",
+      "challenges": "Real-time inventory synchronization across multiple platforms, AI model optimization for demand prediction",
+      "testimonial": {
+        "quote": "Genevieve transformed our entire business. The automation platform she built saved us 40 hours per week and tripled our revenue in 6 months.",
+        "author": "Sarah Chen",
+        "position": "CEO, TechFlow Solutions"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Automated Marketing Analytics Dashboard",
+      "description": "Real-time marketing analytics platform that processes 10M+ data points daily and generates automated reports",
+      "longDescription": "Developed a comprehensive marketing analytics platform that aggregates data from multiple sources including Google Analytics, Facebook Ads, email campaigns, and CRM systems. Features automated report generation, predictive analytics, and real-time alert systems for campaign optimization.",
+      "technologies": ["Vue.js", "Python", "FastAPI", "PostgreSQL", "Apache Kafka", "Docker", "Kubernetes", "Google Cloud"],
+      "category": "Analytics Platform",
+      "projectType": "B2B Platform",
+      "image": "/images/analytics-hero.jpg",
+      "gallery": ["/images/analytics-1.jpg", "/images/analytics-2.jpg"],
+      "liveUrl": "https://demo-marketing-analytics.com",
+      "featured": true,
+      "completionDate": "2024-04-20",
+      "client": "DataDriven Marketing Agency",
+      "businessImpact": "90% reduction in reporting time, 45% improvement in campaign ROI, 60% faster decision making",
+      "duration": "3 months",
+      "teamSize": "Team of 2",
+      "challenges": "Processing massive amounts of real-time data, creating intuitive visualizations for complex analytics",
+      "testimonial": {
+        "quote": "The analytics platform Genevieve built is a game-changer. We can now make data-driven decisions in real-time instead of waiting weeks for reports.",
+        "author": "Marcus Johnson",
+        "position": "Head of Analytics, DataDriven"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Workflow Automation Suite for Legal Firms",
+      "description": "End-to-end legal workflow automation that reduced document processing time by 85% and eliminated human errors",
+      "longDescription": "Created a comprehensive workflow automation system for legal firms that handles document generation, client communication, case tracking, billing automation, and compliance monitoring. The system integrates with legal databases and court systems to streamline operations.",
+      "technologies": ["React", "Node.js", "MongoDB", "Python", "Natural Language Processing", "AWS Lambda", "Elasticsearch"],
+      "category": "Workflow Automation",
+      "projectType": "Custom Development",
+      "image": "/images/legal-hero.jpg",
+      "gallery": ["/images/legal-1.jpg", "/images/legal-2.jpg"],
+      "liveUrl": "https://demo-legal-automation.com",
+      "featured": false,
+      "completionDate": "2024-02-28",
+      "client": "Sterling Legal Partners",
+      "businessImpact": "85% reduction in document processing time, 95% reduction in errors, 40% increase in client satisfaction",
+      "duration": "5 months",
+      "teamSize": "Solo project",
+      "challenges": "Complex legal document parsing, ensuring compliance with legal standards, integrating with legacy systems",
+      "testimonial": {
+        "quote": "Genevieve's automation system revolutionized our practice. We can now handle 3x more cases with the same team size.",
+        "author": "Jennifer Sterling",
+        "position": "Managing Partner, Sterling Legal"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Real-time Inventory Management System",
+      "description": "Multi-location inventory system with predictive restocking that eliminated stockouts and reduced carrying costs by 35%",
+      "longDescription": "Built a sophisticated inventory management system that tracks products across multiple warehouses and retail locations in real-time. Features include predictive analytics for demand forecasting, automated reordering, supplier integration, and mobile apps for warehouse staff.",
+      "technologies": ["Angular", "Spring Boot", "MySQL", "Apache Kafka", "TensorFlow", "AWS", "Mobile Apps"],
+      "category": "Inventory System",
+      "projectType": "Enterprise Solution",
+      "image": "/images/inventory-hero.jpg",
+      "gallery": ["/images/inventory-1.jpg"],
+      "liveUrl": "https://demo-inventory-system.com",
+      "featured": false,
+      "completionDate": "2024-01-15",
+      "client": "RetailMax Corporation",
+      "businessImpact": "Zero stockouts achieved, 35% reduction in carrying costs, 50% improvement in inventory turnover",
+      "duration": "6 months",
+      "teamSize": "Team of 3",
+      "challenges": "Real-time synchronization across multiple locations, complex demand prediction algorithms",
+      "testimonial": {
+        "quote": "The inventory system has been a massive success. We've eliminated stockouts completely and our efficiency has skyrocketed.",
+        "author": "David Kim",
+        "position": "Operations Director, RetailMax"
+      }
+    }
+  ],
+  "skills": [
+    { "name": "JavaScript/TypeScript", "level": 95, "category": "Frontend" },
+    { "name": "React", "level": 95, "category": "Frontend" },
+    { "name": "Vue.js", "level": 90, "category": "Frontend" },
+    { "name": "Node.js", "level": 95, "category": "Backend" },
+    { "name": "Python", "level": 90, "category": "Backend" },
+    { "name": "Java", "level": 85, "category": "Backend" },
+    { "name": "PostgreSQL", "level": 90, "category": "Database" },
+    { "name": "MongoDB", "level": 85, "category": "Database" },
+    { "name": "AWS", "level": 90, "category": "Cloud" },
+    { "name": "Docker", "level": 85, "category": "DevOps" },
+    { "name": "Kubernetes", "level": 80, "category": "DevOps" },
+    { "name": "API Design", "level": 95, "category": "Architecture" },
+    { "name": "System Architecture", "level": 90, "category": "Architecture" },
+    { "name": "Process Automation", "level": 95, "category": "Automation" },
+    { "name": "AI/ML Integration", "level": 85, "category": "AI" }
+  ],
+  "experience": [
+    {
+      "company": "Freelance",
+      "position": "Fullstack Developer & Automation Specialist",
+      "duration": "2022 - Present",
+      "description": "Building custom automation solutions and fullstack applications for businesses. Specialized in process optimization, workflow automation, and scalable web applications."
+    },
+    {
+      "company": "TechCorp Solutions",
+      "position": "Senior Software Engineer",
+      "duration": "2020 - 2022",
+      "description": "Led development of enterprise applications, mentored junior developers, and implemented automated testing and deployment pipelines."
+    },
+    {
+      "company": "StartupBoost Inc",
+      "position": "Fullstack Developer",
+      "duration": "2018 - 2020",
+      "description": "Developed MVP applications for early-stage startups, built scalable backend systems, and created user-friendly frontend interfaces."
+    }
+  ]
+}
