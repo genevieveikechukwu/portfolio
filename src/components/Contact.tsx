@@ -104,7 +104,7 @@ const Contact = () => {
       icon: Github,
       label: "GitHub",
       href: "https://github.com/genevieveikechukwu",
-      username: "@yourusername"
+      username: "@genevieveikechukwu"
     },
     {
       icon: Linkedin,
