@@ -111,8 +111,9 @@ const About = () => {
             <div className="bg-accent/10 rounded-2xl p-8 border border-accent/20">
               <h4 className="text-xl font-bold text-accent mb-4">Beyond the Code</h4>
               <p className="text-foreground/90 leading-relaxed">
-                When I'm not building automation systems, I love experimenting with new technologies, 
-                contributing to open-source projects, and helping other developers grow their skills. 
+                When I'm not building automation systems, I love experimenting with new technologies like robotics, 
+                contributing to open-source projects, and helping other developers grow their skills.  I also explore business strategies and
+                how technology can drive innovation in various industries. 
                 I believe that the best solutions come from understanding both the technical and business sides of a problem.
               </p>
             </div>

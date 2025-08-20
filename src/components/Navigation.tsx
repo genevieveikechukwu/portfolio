@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,6 +81,7 @@ const Navigation = () => {
               onClick={() => scrollToSection("#contact")}
               className="font-semibold"
             >
+
               Hire Me
             </Button>
           </div>

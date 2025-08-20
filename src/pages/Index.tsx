@@ -27,7 +27,7 @@ const Index = () => {
       <footer className="bg-background border-t border-border/50 py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            © 2024 Mmachukwu Ikechukwu Genevieve. Built with React, Tailwind CSS, and lots of ☕
+            © {new Date().getFullYear()} Mmachukwu Ikechukwu Genevieve. Built with React, Tailwind CSS, and lots of ☕
           </p>
         </div>
       </footer>

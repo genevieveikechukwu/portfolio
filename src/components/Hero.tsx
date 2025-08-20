@@ -50,9 +50,8 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="w-24 h-24 mx-auto bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-glow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <span className="text-2xl font-bold text-primary-foreground relative z-10">G</span>
+            <div className="w-24 h-24 mx-auto  flex items-center justify-center shadow-glow relative overflow-hidden group">
+       
             </div>
           </motion.div>
 
@@ -108,8 +107,12 @@ const Hero = () => {
                 variant="default" 
                 size="lg" 
                 className="group px-8 py-3 rounded-full transition-all duration-500 hover:shadow-elegant"
+               
               >
-                Start Your Project
+              <a href="mailto:genevieveikechukwum@gmail.com">
+                     Start Your Project
+                </a>
+             
                 <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               
@@ -132,9 +135,9 @@ const Hero = () => {
               className="flex justify-center gap-6 pt-8"
             >
               {[
-                { icon: Mail, href: "mailto:your-email@example.com", label: "Email" },
-                { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com/in/yourprofile", label: "LinkedIn" }
+                { icon: Mail, href: "mailto:genevieveikechukwum@gmail.com", label: "Email" },
+                { icon: Github, href: "https://github.com/genevieveikechukwu", label: "GitHub" },
+                { icon: Linkedin, href: "https://linkedin.com/in/genevieve-ikechukwu", label: "LinkedIn" }
               ].map((social, index) => (
                 <motion.a
                   key={social.label}

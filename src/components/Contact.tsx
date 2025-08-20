@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 import { 
   Mail, 
   Github, 
@@ -31,22 +32,42 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "I'll get back to you within 24 hours.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      project: "",
-      timeline: "",
-      message: ""
-    });
-    setIsSubmitting(false);
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          project: formData.project,
+          timeline: formData.timeline,
+          message: formData.message,
+          to_name: 'Genevieve',
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "I'll get back to you within 24 hours.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        project: "",
+        timeline: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -60,14 +81,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your-email@example.com",
-      href: "mailto:your-email@example.com",
+      value: "genevieveikechukwum@gmail.com",
+      href: "mailto:genevieveikechukwum@gmail.com",
       description: "Best way to reach me"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Lagos, Nigeria",
+      value: "Remote (Worldwide)",
       description: "Available remotely worldwide"
     },
     {
@@ -82,14 +103,14 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/genevieveikechukwu",
       username: "@yourusername"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/yourprofile",
-      username: "/in/yourprofile"
+      href: "https://linkedin.com/in/genevieve-ikechukwu",
+      username: "/in/genevieve-ikechukwu"
     }
   ];
 
@@ -338,10 +359,10 @@ const Contact = () => {
             <div className="bg-secondary/20 backdrop-blur-sm rounded-3xl p-8 border border-secondary/30">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 bg-secondary rounded-full animate-pulse" />
-                <h4 className="text-lg font-bold text-secondary">Currently Available</h4>
+                <h4 className="text-lg font-bold text-accent-foreground">Currently Available</h4>
               </div>
               <p className="text-foreground/80 mb-4">
-                I'm currently accepting new projects with start dates in early 2024.
+                I'm currently accepting new projects.
               </p>
               <Button variant="secondary" size="sm" className="w-full">
                 Check Availability

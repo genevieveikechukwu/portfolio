@@ -134,39 +134,7 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <div className="bg-gradient-hero rounded-3xl p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-glow opacity-20" />
-            <div className="relative z-10">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <Zap className="w-8 h-8 text-accent-foreground animate-pulse" />
-                <h3 className="text-3xl font-bold text-accent-foreground">
-                  Ready to Automate Your Business?
-                </h3>
-              </div>
-              <p className="text-xl text-accent-foreground/90 mb-8 max-w-2xl mx-auto">
-                Let's discuss how I can help you save time, reduce costs, and scale your operations 
-                with custom automation solutions.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button variant="secondary" size="xl" className="shadow-accent">
-                  <Star className="w-5 h-5 mr-2" />
-                  Start Your Project
-                </Button>
-                <Button variant="outline" size="xl" className="border-accent-foreground/30 text-accent-foreground hover:bg-accent-foreground/10">
-                  View All Projects
-                </Button>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

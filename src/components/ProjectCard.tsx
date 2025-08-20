@@ -21,7 +21,7 @@ interface Project {
   duration: string;
   teamSize: string;
   challenges: string;
-  testimonial: {
+  testimonial?: {
     quote: string;
     author: string;
     position: string;
@@ -92,14 +92,14 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         </div>
 
         {/* Client Testimonial */}
-        <div className="bg-accent/20 rounded-lg p-4 border border-accent/30">
+        {/* <div className="bg-accent/20 rounded-lg p-4 border border-accent/30">
           <blockquote className="text-sm italic text-foreground/90 mb-2">
-            "{project.testimonial.quote}"
+            "{project?.testimonial?.quote}"
           </blockquote>
           <cite className="text-xs text-accent font-medium">
-            — {project.testimonial.author}, {project.testimonial.position}
+            — {project?.testimonial?.author}, {project?.testimonial?.position}
           </cite>
-        </div>
+        </div> */}
 
         {/* Project Details */}
         <div className="grid grid-cols-2 gap-4 text-sm">
